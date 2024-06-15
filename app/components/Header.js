@@ -94,7 +94,7 @@ const Header = () => {
             <p className="text-[#475467] flex items-center gap-[8px] text-[14px] leading[20px] font-[500]">
               Seja bem vinda, Demi!
               <span className="flex text-[#667085] gap-[6px] rounded-[6px] px-[4px] py-[2px] border border-[#D0D5DD]">
-                <img src="/assets/_dot.svg" alt="dot" />
+                <img src="/assets/dot.svg" alt="dot" />
                 Conta selecionada: Matriz
               </span>
             </p>
