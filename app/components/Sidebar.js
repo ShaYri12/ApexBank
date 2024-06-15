@@ -119,7 +119,7 @@ const Sidebar = () => {
               <img
                 width={"18px"}
                 height={"18px"}
-                src="/assets/Extrato.svg"
+                src="/assets/extrato.svg"
                 alt="Extrato"
               />
               Extrato
