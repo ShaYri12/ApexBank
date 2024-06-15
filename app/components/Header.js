@@ -119,7 +119,7 @@ const Header = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="bg-white px-[8px] h-8 py-[14px] rounded-[8px]"
+                  className="bg-white shadow-sm px-[8px] h-8 py-[14px] rounded-[8px]"
                 >
                   <img
                     width={"20px"}
@@ -140,7 +140,7 @@ const Header = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="flex bg-white gap-[8px] px-[8px] py-[14px] rounded-[8px] w-max h-8 text-[14px] text-[#344054] font-[500] leading[20px]"
+                  className="flex shadow-sm bg-white gap-[8px] px-[8px] py-[14px] rounded-[8px] w-max h-8 text-[14px] text-[#344054] font-[500] leading[20px]"
                 >
                   <img
                     width={"20px"}

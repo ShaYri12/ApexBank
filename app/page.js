@@ -50,11 +50,115 @@ import {
     TabsTrigger,
   } from "@/components/ui/tabs"
 
+  function CheckIcon(props) {
+    return (
+      <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20 6 9 17l-5-5" />
+      </svg>
+    );
+  }
+  
+  function ImportIcon(props) {
+    return (
+      <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3v12" />
+        <path d="m8 11 4 4 4-4" />
+        <path d="M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4" />
+      </svg>
+    );
+  }
+  
+  function ReceiptIcon(props) {
+    return (
+      <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" />
+        <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+        <path d="M12 17.5v-11" />
+      </svg>
+    );
+  }
+  
+  function ShoppingCartIcon(props) {
+    return (
+      <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="8" cy="21" r="1" />
+        <circle cx="19" cy="21" r="1" />
+        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+      </svg>
+    );
+  }
 
   
 const dashboard = () => {
   return (
-    <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
+    <main className="flex flex-col px-[32px] gap-[32px]">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex items-start gap-[12px] px-[16px] py-[20px] rounded-[12px] border border-[#EAECF0] bg-white shadow-sm">
+          <div className= "flex items-center justify-center p-[24px] rounded-full shadow border border-[#EAECF0]">
+            <img
+            width={"24px"}
+            height={"24px"}
+            className="absolute"
+            src="/assets/receber.svg"
+            alt="Receber"
+          />
+          </div>
+          <div className="flex flex-col gap-[6px]">
+            <h3 className="text-textColor font-[600] text-[16px] leading-[24px]">Receber</h3>
+            <p className="text-[#D0D5DD] text-[12px] font-[400] leading-[18px]">
+              Pix (Depósito, Cobrança e Chave); Emitir boletos; Receber TED
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-[12px] px-[16px] py-[20px] rounded-[12px] border border-[#EAECF0] bg-white shadow-sm">
+          <div className= "flex items-center justify-center p-[24px] rounded-full shadow border border-[#EAECF0]">
+            <img
+            width={"24px"}
+            height={"24px"}
+            className="absolute"
+            src="/assets/pagar.svg"
+            alt="Pagar"
+          />
+          </div>
+          <div className="flex flex-col gap-[6px]">
+            <h3 className="text-textColor font-[600] text-[16px] leading-[24px]">Pagar</h3>
+            <p className="text-[#D0D5DD] text-[12px] font-[400] leading-[18px]">
+              Pix (Pagar,Transferência); TED/DOC; Pagar boleto/conta; Câmbio
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-[12px] px-[16px] py-[20px] rounded-[12px] border border-[#EAECF0] bg-white shadow-sm">
+          <div className= "flex items-center justify-center p-[24px] rounded-full shadow border border-[#EAECF0]">
+            <img
+            width={"24px"}
+            height={"24px"}
+            className="absolute"
+            src="/assets/investir2.svg"
+            alt="Investir"
+          />
+          </div>
+          <div className="flex flex-col gap-[6px]">
+            <h3 className="text-textColor font-[600] text-[16px] leading-[24px]">Investir</h3>
+            <p className="text-[#D0D5DD] text-[12px] font-[400] leading-[18px]">Ações, Títulos, Imóveis e Fundos</p>
+          </div>
+        </div>
+        <div className="flex items-start gap-[12px] px-[16px] py-[20px] rounded-[12px] border border-[#EAECF0] bg-white shadow-sm">
+          <div className= "flex items-center justify-center p-[24px] rounded-full shadow border border-[#EAECF0]">
+              <img
+              width={"24px"}
+              height={"24px"}
+              className="absolute"
+              src="/assets/comprar2.svg"
+              alt="Comprar"
+            />
+          </div>
+          <div className="flex flex-col gap-[6px]">
+            <h3 className="text-textColor font-[600] text-[16px] leading-[24px]">Comprar</h3>
+            <p className="text-[#D0D5DD] text-[12px] font-[400] leading-[18px]">Em breve novidades para compra de criptomoedas</p>
+          </div>
+        </div>
+      </div>
+      <div className="grid flex-1 items-start gap-4 sm:py-0 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
       <div className="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-2"> 
         <Tabs defaultValue="week">
           <div className="flex items-center">
@@ -436,6 +540,7 @@ const dashboard = () => {
             </Pagination>
           </CardFooter>
         </Card>
+      </div>
       </div>
     </main>
   );
