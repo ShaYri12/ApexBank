@@ -184,12 +184,12 @@ const Header = () => {
           </div>
           <div className="flex gap-[8px] ms-auto">
             <img
-            width={"16px"}
-            height={"16px"}
+            width={"11.11px"}
+            height={"10px"}
             src="/assets/reload.svg"
             alt="reload"
             />
-            <p>Última atualização: 10/09/2023 ás 13:45</p>
+            <p className="text-[14px] text-[#98A2B3] font-[400] leading[20px]">Última atualização: 10/09/2023 ás 13:45</p>
           </div>
         </div>
       </div>
