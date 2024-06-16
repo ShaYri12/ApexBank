@@ -3,8 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 const NewCardsAnnouncement = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center bg-white dark:bg-zinc-900 p-6 rounded-lg shadow-lg">
-      <Card className="flex flex-col items-start md:w-1/2 bg-transparent shadow-none">
+    <div className="flex flex-col md:flex-row items-center ps-[54px]">
+      <Card className="flex flex-col items-start md:w-1/2 bg-transparent shadow-none p-0">
         <CardContent>
           <CardHeader className="flex items-center mb-4">
             <img
@@ -22,12 +22,13 @@ const NewCardsAnnouncement = () => {
           </CardDescription>
         </CardContent>
       </Card>
-      <div className="mt-6 md:mt-0 md:w-1/2 flex justify-center">
+      <div className="mt-6 md:mt-0 flex justify-center">
         <img
-          aria-hidden="true"
-          alt="bank cards"
-          src="https://placehold.co/400x300"
-          className="rounded-lg shadow-lg"
+          width={"467px"}
+          height={"410px"}
+          src="/assets/new-card.svg"
+          alt="cardimg"
+          className="mr-[-15%]"
         />
       </div>
     </div>
