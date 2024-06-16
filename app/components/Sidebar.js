@@ -1,7 +1,6 @@
 'use client'
 import Link from "next/link";
-import React, { useState } from "react";
-import { Search } from "lucide-react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -15,23 +14,61 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Sidebar = () => {
+  // Initialize state for active link and sidebar expansion
   const [activeLink, setActiveLink] = useState("Dashboard");
+  const [isExpanded, setIsExpanded] = useState(true);
 
+  // Function to handle link clicks
   const handleLinkClick = (linkName) => {
     setActiveLink(linkName);
   };
 
+  // Function to toggle sidebar expansion
+  const toggleSidebar = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  // Effect to set sidebar expansion based on viewport width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) { // Adjust this breakpoint according to your medium device size
+        setIsExpanded(false);
+      } else {
+        setIsExpanded(true);
+      }
+    };
+
+    // Set initial sidebar expansion based on viewport width
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <aside className="fixed inset-y-0 overflow-y-auto left-0 w-[312px] justify-between z-10 hidden w-14 flex-col border-r bg-[#FFFFFF] sm:flex">
+    <>
+    <div className={`relative left-0 sidebar-behind ${isExpanded ? 'lg:w-[421px] md:w-[260px] w-[82px]' : 'w-[82px]'}`}></div>
+    <aside className={`fixed inset-y-0 overflow-y-auto left-0 ${isExpanded ? 'md:w-[200px] lg:w-[312px] w-[82px]' : 'w-[82px]'} justify-between z-10 hidden flex-col border-r border-[#EAECF0] bg-[#FFFFFF] sm:flex`}>
       <div className="flex flex-col pt-[32px] text-[16px] gap-[24px]">
+      {isExpanded ?(
         <div className="nav-brand px-[24px]">
-          <img src="/assets/logo.svg" alt="Logo" />
+          <img src={`/assets/logo.svg `} alt="Logo" />
         </div>
-        <div className="relative flex-1 px-[24px] md:grow-0 pt-[10px]  pb-[10px] pr[14px]">
+      ):(
+        <div className="nav-brand mx-auto">
+          <img src={`/assets/logo-small.svg `} alt="Logo" />
+        </div>
+      )}
+        <div className={`relative flex-1 px-[24px] md:grow-0 pt-[10px]  pb-[10px] pr[14px] ${isExpanded ? '' : 'hidden'}`}>
           <img
             className="absolute pl-[16.5px] top-[35%]"
             src="/assets/search.svg"
-            alt="Logo"
+            alt="Search Icon"
           />
           <Input
             type="search"
@@ -39,10 +76,11 @@ const Sidebar = () => {
             className="w-full rounded-lg bg-background pl-[46px] "
           />
         </div>
-        <nav className="grid items-start px-2 gap-[20px] font-[600] text-textColor text-[16px] lg:px-[16px]">
+        <nav className={`grid items-start px-2 gap-[20px] font-[600] text-textColor text-[16px] lg:px-[16px] ${isExpanded ? '' : 'items-center'}`}>
           <div className="p-[12px]">
             <Link
               href="#"
+              onClick={toggleSidebar}
               className="flex text-[#8D7F6D] font-[400] items-center gap-[12px] rounded-lg transition-all hover:text-primary"
             >
               <img
@@ -51,7 +89,7 @@ const Sidebar = () => {
                 src="/assets/menu.svg"
                 alt="Menu"
               />
-              Recuar menu
+              {isExpanded && 'Recuar menu'}
             </Link>
           </div>
           <hr />
@@ -59,11 +97,7 @@ const Sidebar = () => {
             <Link
               href="#"
               onClick={() => handleLinkClick("Dashboard")}
-              className={`flex items-center gap-[12px] p-[12px] rounded-lg transition-all ${
-                activeLink === "Dashboard"
-                  ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]"
-                  : "text-[#8D7F6D] hover:text-primary"
-              }`}
+              className={`flex items-center gap-[12px] p-[12px] rounded-lg transition-all ${activeLink === "Dashboard" ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]" : "text-[#8D7F6D] hover:text-primary"}`}
             >
               <img
                 width={"18px"}
@@ -71,16 +105,12 @@ const Sidebar = () => {
                 src="/assets/dashboard.svg"
                 alt="Dashboard"
               />
-              Dashboard
+              {isExpanded && 'Dashboard'}
             </Link>
             <Link
               href="#"
               onClick={() => handleLinkClick("Receber")}
-              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${
-                activeLink === "Receber"
-                  ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]"
-                  : "text-[#8D7F6D] hover:text-primary"
-              }`}
+              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${activeLink === "Receber" ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]" : "text-[#8D7F6D] hover:text-primary"}`}
             >
               <img
                 width={"18px"}
@@ -88,16 +118,12 @@ const Sidebar = () => {
                 src="/assets/receber.svg"
                 alt="Receber"
               />
-              Receber
+              {isExpanded && 'Receber'}
             </Link>
             <Link
               href="#"
               onClick={() => handleLinkClick("Pagar")}
-              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${
-                activeLink === "Pagar"
-                  ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]"
-                  : "text-[#8D7F6D] hover:text-primary"
-              }`}
+              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${activeLink === "Pagar" ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]" : "text-[#8D7F6D] hover:text-primary"}`}
             >
               <img
                 width={"18px"}
@@ -105,16 +131,12 @@ const Sidebar = () => {
                 src="/assets/pagar.svg"
                 alt="Pagar"
               />
-              Pagar
+              {isExpanded && 'Pagar'}
             </Link>
             <Link
               href="#"
               onClick={() => handleLinkClick("Extrato")}
-              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${
-                activeLink === "Extrato"
-                  ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]"
-                  : "text-[#8D7F6D] hover:text-primary"
-              }`}
+              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${activeLink === "Extrato" ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]" : "text-[#8D7F6D] hover:text-primary"}`}
             >
               <img
                 width={"18px"}
@@ -122,16 +144,12 @@ const Sidebar = () => {
                 src="/assets/extrato.svg"
                 alt="Extrato"
               />
-              Extrato
+              {isExpanded && 'Extrato'}
             </Link>
             <Link
               href="#"
               onClick={() => handleLinkClick("Investir")}
-              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${
-                activeLink === "Investir"
-                  ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]"
-                  : "text-[#8D7F6D] hover:text-primary"
-              }`}
+              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${activeLink === "Investir" ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]" : "text-[#8D7F6D] hover:text-primary"}`}
             >
               <img
                 width={"18px"}
@@ -139,16 +157,12 @@ const Sidebar = () => {
                 src="/assets/investir.svg"
                 alt="Investir"
               />
-              Investir
+              {isExpanded && 'Investir'}
             </Link>
             <Link
               href="#"
               onClick={() => handleLinkClick("Comprar")}
-              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${
-                activeLink === "Comprar"
-                  ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]"
-                  : "text-[#8D7F6D] hover:text-primary"
-              }`}
+              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${activeLink === "Comprar" ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]" : "text-[#8D7F6D] hover:text-primary"}`}
             >
               <img
                 width={"18px"}
@@ -156,12 +170,12 @@ const Sidebar = () => {
                 src="/assets/comprar.svg"
                 alt="Comprar"
               />
-              Comprar
+              {isExpanded && 'Comprar'}
             </Link>
           </div>
         </nav>
       </div>
-      <div className="flex flex-col gap-[24px]">
+      <div className={`flex flex-col gap-[24px] ${isExpanded ? '' : 'hidden'}`}>
         <Card className="px-[16px] py-[40px] text-textColor gap-[32px] border-none text-[24px] font-[600] leading[24px]">
           <CardHeader className="gap-[16px]">
             <CardTitle>
@@ -220,11 +234,7 @@ const Sidebar = () => {
             <Link
               href="#"
               onClick={() => handleLinkClick("Suporte")}
-              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${
-                activeLink === "Suporte"
-                  ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]"
-                  : "text-[#8D7F6D] hover:text-primary"
-              }`}
+              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${activeLink === "Suporte" ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]" : "text-[#8D7F6D] hover:text-primary"}`}
             >
               <img
                 width={"18px"}
@@ -237,11 +247,7 @@ const Sidebar = () => {
             <Link
               href="#"
               onClick={() => handleLinkClick("Configurações")}
-              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${
-                activeLink === "Configurações"
-                  ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]"
-                  : "text-[#8D7F6D] hover:text-primary"
-              }`}
+              className={`flex items-center p-[12px] gap-[12px] rounded-lg transition-all ${activeLink === "Configurações" ? "bg-muted text-[#8D7F6D] bg-[#F7F5F0]" : "text-[#8D7F6D] hover:text-primary"}`}
             >
               <img
                 width={"18px"}
@@ -255,10 +261,10 @@ const Sidebar = () => {
           <hr />
           <div className="flex gap-[25px] p-[12px] text-textColor text-[14px] font-[600] leading[24px]">
             <div className="flex gap-[12px]">
-            <Avatar className="w-[40px] h-[40px]">
-              <AvatarImage src="/assets/profile.jpg" />
-              <AvatarFallback>Profile</AvatarFallback>
-            </Avatar>
+              <Avatar className="w-[40px] h-[40px]">
+                <AvatarImage src="/assets/profile.jpg" />
+                <AvatarFallback>Profile</AvatarFallback>
+              </Avatar>
               <span>
                 <h3>Olivia Rhye</h3>
                 <p className="text-[#8D7F6D]">olivia@untitledui.com</p>
@@ -275,6 +281,7 @@ const Sidebar = () => {
         </div>
       </div>
     </aside>
+    </>
   );
 };
 

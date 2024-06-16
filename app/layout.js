@@ -12,9 +12,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-white font-inter">
         <div className="flex min-h-screen w-full bg-muted/40">
-          <div className="relative sidebar-behind w-[373px] h-[209px]"></div>
           <Sidebar/>
-          <div className="flex flex-col w-full bg-[#F7F8F9] my-[12px] rounded-[24px] gap-[32px] p-[32px]">
+          <div className="flex flex-col w-full bg-[#F7F8F9] my-[12px] rounded-[24px] p-[32px]">
             <Header/>
             {children}
           </div>

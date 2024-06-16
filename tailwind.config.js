@@ -20,6 +20,9 @@ module.exports = {
       fontFamily: {
         inter: ['"Inter"', 'sans-serif'],
       },
+      backgroundImage: {
+        customGradient: 'linear-gradient(to left, rgba(40, 54, 92, 1), rgba(105, 142, 245, 0.77))',
+      },
       colors: {
         textColor: "#28365C",
         border: "hsl(var(--border))",
