@@ -75,7 +75,7 @@ const ExchangeRates = () => {
                     />
                   </div>
                   <p className="ml-2 text-[#28365C] text-[16px] leading-[24px] font-[600]">
-                    5.190,47 <span className="font-[400]">USD</span>
+                    5.190,47 <span className="font-[400]">EUR</span>
                   </p>
                 </div>
                 <Badge className="bg-[#ECFDF3] border border-[#ABEFC6] text-[#067647] border-dotted">
@@ -109,7 +109,7 @@ const ExchangeRates = () => {
                     />
                   </div>
                   <p className="ml-2 text-[#28365C] text-[16px] leading-[24px] font-[600]">
-                    5.190,47 <span className="font-[400]">USD</span>
+                    5.190,47 <span className="font-[400]">CNY</span>
                   </p>
                 </div>
                 <Badge className="bg-[#FEF3F2] border border-[#FECDCA] text-[#B42318] border-dotted flex items-center">
@@ -142,7 +142,7 @@ const ExchangeRates = () => {
                     />
                   </div>
                   <p className="ml-2 text-[#28365C] text-[16px] leading-[24px] font-[600]">
-                    5.190,47 <span className="font-[400]">USD</span>
+                    5.190,47 <span className="font-[400]">RUB</span>
                   </p>
                 </div>
                 <Badge className="bg-[#ECFDF3] border border-[#ABEFC6] text-[#067647] border-dotted">
