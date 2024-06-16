@@ -69,8 +69,8 @@ const ExchangeRates = () => {
                     <img
                       width="20"
                       height="20"
-                      src="/assets/US.svg"
-                      alt="US"
+                      src="/assets/euro.svg"
+                      alt="euro"
                       className="absolute top-0 left-3 z-10"
                     />
                   </div>
@@ -103,8 +103,8 @@ const ExchangeRates = () => {
                     <img
                       width="20"
                       height="20"
-                      src="/assets/US.svg"
-                      alt="US"
+                      src="/assets/CN.svg"
+                      alt="CN"
                       className="absolute top-0 left-3 z-10"
                     />
                   </div>
@@ -112,11 +112,12 @@ const ExchangeRates = () => {
                     5.190,47 <span className="font-[400]">USD</span>
                   </p>
                 </div>
-                <Badge className="bg-[#ECFDF3] border border-[#ABEFC6] text-[#067647] border-dotted">
+                <Badge className="bg-[#FEF3F2] border border-[#FECDCA] text-[#B42318] border-dotted flex items-center">
                   <img
+                    className="transform rotate-180"
                     width={"12px"}
                     height={"12px"}
-                    src="/assets/arrow-up-green.svg"
+                    src="/assets/arrow-up-red.svg"
                     alt="trend-up"
                   />{" "}
                   9.2%
@@ -135,8 +136,8 @@ const ExchangeRates = () => {
                     <img
                       width="20"
                       height="20"
-                      src="/assets/US.svg"
-                      alt="US"
+                      src="/assets/RU.svg"
+                      alt="RU"
                       className="absolute top-0 left-3 z-10"
                     />
                   </div>
