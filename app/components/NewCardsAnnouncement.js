@@ -3,21 +3,22 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 const NewCardsAnnouncement = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center ps-[54px]">
-      <Card className="flex flex-col items-start md:w-1/2 bg-transparent shadow-none p-0">
-        <CardContent>
-          <CardHeader className="flex items-center mb-4">
+    <div className="flex flex-col md:flex-row items-center ps-[54px] justify-between">
+      <Card className="flex flex-col items-start md:w-1/2 bg-transparent border-none shadow-none p-0">
+        <CardContent className="p-0 flex flex-col gap-[24px]">
+          <CardHeader className="flex items-start p-0 gap-[24px]">
             <img
+              width={"39px"}
+              height={"30px"}
               aria-hidden="true"
               alt="card icon"
-              src="https://placehold.co/32x32"
-              className="mr-2"
+              src="/assets/card-icon.svg"
             />
-            <CardTitle className="text-2xl md:text-3xl font-bold text-zinc-800 dark:text-zinc-200">
+            <CardTitle className="text-[48px] text-[#28365C] font-[600] leading-[60px] tracking-[-2%]">
               Novos cartões Apex Bank. Em breve!
             </CardTitle>
           </CardHeader>
-          <CardDescription className="text-zinc-600 dark:text-zinc-400">
+          <CardDescription className="text-[20px] text-[#475467] font-[400] leading-[30px]">
             Quando se trata de administrar suas finanças, a escolha do cartão certo faz toda a diferença.
           </CardDescription>
         </CardContent>
