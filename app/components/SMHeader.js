@@ -9,17 +9,17 @@ const SMHeader = () => {
 
         <div className="flex gap-[16px]">
           <img
-            src="/assets/Bell.svg"
+            src="/assets/bell.svg"
             alt="logo"
             className="w-[24px] h-[24px]"
           />
           <img
-            src="/assets/Setting.svg"
+            src="/assets/setting.svg"
             alt="logo"
             className="w-[24px] h-[24px]"
           />
           <img
-            src="/assets/Wallet.svg"
+            src="/assets/wallet.svg"
             alt="logo"
             className="w-[24px] h-[24px]"
           />
