@@ -10,6 +10,7 @@ import TransactionSM from "./components/TransactionSM";
 import CardsSM from "./components/CardsSM";
 import Credit from "./components/Credit";
 import SliderCards from "./components/SliderCards";
+import Balance from "./components/Balance";
 
 const Dashboard = () => {
   return (
@@ -23,6 +24,7 @@ const Dashboard = () => {
       <CardsSM />
       <Credit />
       <SliderCards />
+      <Balance />
       <Table />
       <NewCardsAnnouncement />
     </main>

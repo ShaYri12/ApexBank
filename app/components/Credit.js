@@ -8,11 +8,8 @@ const Credit = () => {
     <div className="md:hidden">
       <div className="flex justify-between pb-5">
         <p className="text-[#8D7F6D]">Seu cartão</p>
-        <Button
-          variant="outline"
-          className="h-[20px] w-[20px] rounded-full border-[#D0D5DD] border-dashed p-1 text-[#98A2B3]"
-        >
-          <FaPlus />
+        <Button variant="secondary">
+          <img src="/assets/Pluss.svg" />
         </Button>
       </div>
       <div
