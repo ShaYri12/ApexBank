@@ -5,6 +5,8 @@ import Analytics from "./components/Analytics";
 import ExchangeRates from "./components/ExchangeRates";
 import Table from "./components/Table";
 import NewCardsAnnouncement from "./components/NewCardsAnnouncement";
+import Investments from "./components/Investments";
+import Discover from "./components/Discover";
 import SMHeader from "./components/SMHeader";
 import TransactionSM from "./components/TransactionSM";
 import CardsSM from "./components/CardsSM";
@@ -15,6 +17,7 @@ import Balance from "./components/Balance";
 const Dashboard = () => {
   return (
     <main className="flex flex-col gap-[32px]">
+
       <SMHeader />
       <Profile />
       <Cards />
@@ -27,6 +30,9 @@ const Dashboard = () => {
       <Balance />
       <Table />
       <NewCardsAnnouncement />
+      <Investments/>
+      <Discover/>
+
     </main>
   );
 };

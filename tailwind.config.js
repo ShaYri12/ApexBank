@@ -21,7 +21,8 @@ module.exports = {
         inter: ['"Inter"', 'sans-serif'],
       },
       backgroundImage: {
-        customGradient: 'linear-gradient(to left, rgba(40, 54, 92, 1), rgba(105, 142, 245, 0.77))',
+        customGradient: 'linear-gradient(251.87deg, #28365C 28.25%, rgba(105, 142, 245, 0.77) 149.61%)',
+        customGradient2: 'linear-gradient(265.95deg, #28365C 22.74%, #6487E8 160.65%)'
       },
       colors: {
         textColor: "#28365C",
