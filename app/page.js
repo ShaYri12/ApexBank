@@ -17,7 +17,6 @@ import Balance from "./components/Balance";
 const Dashboard = () => {
   return (
     <main className="flex flex-col gap-[32px]">
-
       <SMHeader />
       <Profile />
       <Cards />
@@ -30,9 +29,8 @@ const Dashboard = () => {
       <Balance />
       <Table />
       <NewCardsAnnouncement />
-      <Investments/>
-      <Discover/>
-
+      <Investments />
+      <Discover />
     </main>
   );
 };
