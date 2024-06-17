@@ -10,6 +10,15 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { RxCopy } from "react-icons/rx";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const transactions = [
   {
@@ -67,9 +76,26 @@ const TransactionSM = () => {
   return (
     <div className="md:hidden">
       <div className=" rounded-[12px] flex-1">
-        <h3 className="py-[16px]  text-[16px] leading-[24px] text-[#8D7F6D] font-[600]">
-          Transações recentes
-        </h3>
+        <div className="flex justify-between items-center">
+          <h3 className="py-[16px]  text-[16px] leading-[24px] text-[#8D7F6D] font-[600]">
+            Transações recentes
+          </h3>
+
+          <Select>
+            <SelectTrigger className="w-[100px]">
+              <SelectValue placeholder="Conta 2" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectItem value="1">Conta 1</SelectItem>
+                <SelectItem value="2">Conta 2</SelectItem>
+                <SelectItem value="3">Conta 3</SelectItem>
+                <SelectItem value="4">Conta 4</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
+
         <Table className="w-full">
           <TableBody>
             {transactions.map((transaction) => (
