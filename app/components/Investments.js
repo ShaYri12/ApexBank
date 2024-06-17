@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 
 const Investments = () => {
   return (
-    <Card className="flex flex-col gap-[24px] rounded-[12px] bg-white shadow-sm">
+    <Card className="hidden md:flex flex-col gap-[24px] rounded-[12px] bg-white shadow-sm">
       <CardHeader className="flex flex-row gap-[8px] justify-between items-center py-[20px] px-[24px] ">
         <CardTitle className="text-[16px] leading-[24px] text-[#8D7F6D] font-[600]">
           Investimentos
@@ -69,68 +69,68 @@ const Investments = () => {
         </CardContent>
         <CardContent className="p-[24px] gap-[24px] border border-[#EAECF0] shadow-xs grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           <div className="flex flex-col gap-[32px] items-center">
-          <div className="flex gap-[8px] items-start">
-          <img className="pt-[5px]" src="/assets/dot-blue.svg" alt="dot" />
+            <div className="flex gap-[8px] items-start">
+              <img className="pt-[5px]" src="/assets/dot-blue.svg" alt="dot" />
               <div className="flex flex-col gap-[4px]">
-              <span className="text-[14px] text-[#475467] leading-[20px] font-[500]">
-                Renda Fixa
-              </span>
-              <span className="text-[18px] text-[#101828] leading-[28px] font-[600]">
-              R$ 00,00
-            </span>
-            </div>
+                <span className="text-[14px] text-[#475467] leading-[20px] font-[500]">
+                  Renda Fixa
+                </span>
+                <span className="text-[18px] text-[#101828] leading-[28px] font-[600]">
+                  R$ 00,00
+                </span>
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-[32px] items-center">
-          <div className="flex gap-[8px] items-start">
-          <img className="pt-[5px]" src="/assets/dot-blue.svg" alt="dot" />
+            <div className="flex gap-[8px] items-start">
+              <img className="pt-[5px]" src="/assets/dot-blue.svg" alt="dot" />
               <div className="flex flex-col gap-[4px]">
-              <span className="text-[14px] text-[#475467] leading-[20px] font-[500]">
-                Renda Fixa
-              </span>
-              <span className="text-[18px] text-[#101828] leading-[28px] font-[600]">
-              R$ 00,00
-            </span>
-            </div>
+                <span className="text-[14px] text-[#475467] leading-[20px] font-[500]">
+                  Renda Fixa
+                </span>
+                <span className="text-[18px] text-[#101828] leading-[28px] font-[600]">
+                  R$ 00,00
+                </span>
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-[32px] items-center">
-          <div className="flex gap-[8px] items-start">
-          <img className="pt-[5px]" src="/assets/dot-blue.svg" alt="dot" />
+            <div className="flex gap-[8px] items-start">
+              <img className="pt-[5px]" src="/assets/dot-blue.svg" alt="dot" />
               <div className="flex flex-col gap-[4px]">
-              <span className="text-[14px] text-[#475467] leading-[20px] font-[500]">
-                Renda Fixa
-              </span>
-              <span className="text-[18px] text-[#101828] leading-[28px] font-[600]">
-              R$ 00,00
-            </span>
-            </div>
+                <span className="text-[14px] text-[#475467] leading-[20px] font-[500]">
+                  Renda Fixa
+                </span>
+                <span className="text-[18px] text-[#101828] leading-[28px] font-[600]">
+                  R$ 00,00
+                </span>
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-[32px] items-center">
-          <div className="flex gap-[8px] items-start">
-          <img className="pt-[5px]" src="/assets/dot-blue.svg" alt="dot" />
+            <div className="flex gap-[8px] items-start">
+              <img className="pt-[5px]" src="/assets/dot-blue.svg" alt="dot" />
               <div className="flex flex-col gap-[4px]">
-              <span className="text-[14px] text-[#475467] leading-[20px] font-[500]">
-                Renda Fixa
-              </span>
-              <span className="text-[18px] text-[#101828] leading-[28px] font-[600]">
-              R$ 00,00
-            </span>
-            </div>
+                <span className="text-[14px] text-[#475467] leading-[20px] font-[500]">
+                  Renda Fixa
+                </span>
+                <span className="text-[18px] text-[#101828] leading-[28px] font-[600]">
+                  R$ 00,00
+                </span>
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-[32px] items-end">
             <div className="flex gap-[8px] items-start">
               <img className="pt-[5px]" src="/assets/dot-blue.svg" alt="dot" />
               <div className="flex flex-col gap-[4px]">
-              <span className="text-[14px] text-[#475467] leading-[20px] font-[500]">
-                Renda Fixa
-              </span>
-              <span className="text-[18px] text-[#101828] leading-[28px] font-[600]">
-              R$ 00,00
-            </span>
-            </div>
+                <span className="text-[14px] text-[#475467] leading-[20px] font-[500]">
+                  Renda Fixa
+                </span>
+                <span className="text-[18px] text-[#101828] leading-[28px] font-[600]">
+                  R$ 00,00
+                </span>
+              </div>
             </div>
           </div>
         </CardContent>
