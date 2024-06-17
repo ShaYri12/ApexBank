@@ -10,7 +10,7 @@ import {
 
 const Profile = () => {
   return (
-    <div className="flex w-full justify-between">
+    <div className="hidden md:flex w-full justify-between">
       <div className="flex gap-[16px]">
         <Avatar className="w-[74px] h-[74px]">
           <AvatarImage src="/assets/profile.jpg" />

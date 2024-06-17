@@ -7,15 +7,27 @@ import Table from "./components/Table";
 import NewCardsAnnouncement from "./components/NewCardsAnnouncement";
 import Investments from "./components/Investments";
 import Discover from "./components/Discover";
+import SMHeader from "./components/SMHeader";
+import TransactionSM from "./components/TransactionSM";
+import CardsSM from "./components/CardsSM";
+import Credit from "./components/Credit";
+import SliderCards from "./components/SliderCards";
+import Balance from "./components/Balance";
 
 const Dashboard = () => {
   return (
     <main className="flex flex-col gap-[32px]">
 
+      <SMHeader />
       <Profile />
       <Cards />
-      <Analytics />  
+      <Analytics />
+      <TransactionSM />
       <ExchangeRates />
+      <CardsSM />
+      <Credit />
+      <SliderCards />
+      <Balance />
       <Table />
       <NewCardsAnnouncement />
       <Investments/>
