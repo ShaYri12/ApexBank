@@ -1,19 +1,19 @@
 import React from "react";
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-  } from "@/components/ui/card";
-  import { Separator } from "@/components/ui/separator";
-  
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { FaArrowDown, FaArrowUp, FaChevronRight } from "react-icons/fa";
 
 const Analytics = () => {
   return (
-    <div className="flex items-start gap-4 md:gap-8 lg:col-span-2">
-      <Card className="flex-grow flex flex-col rounded-[16px] p-[24px] gap-[32px] bg-white border border-[#EAECF0]">
-        <CardHeader className="flex justify-between items-left p-0">
+    <div className="flex flex-col md:flex-row items-start gap-4 md:gap-8 lg:col-span-2">
+      <Card className="flex-grow w-full md:w-auto flex flex-col rounded-[16px] p-[24px] gap-[32px] bg-white border border-[#EAECF0]">
+        <CardHeader className="flex  justify-between items-left p-0">
           <CardTitle className="flex flex-col gap-[18px] text-[16px] text-[#8D7F6D] font-[500] leading-[24px]">
             <span className="flex gap-[8px]">
               Saldo total
@@ -21,15 +21,44 @@ const Analytics = () => {
                 width={"20px"}
                 height={"20px"}
                 src="/assets/eye.svg"
+                className="text-[#8D7F6D]"
                 alt="Eye"
               />
             </span>
-            <span className="text-textColor text-[30px] text-[#8D7F6D] font-[600] leading-[38px]">
+            <span className="hidden md:block text-textColor text-[30px] text-[#8D7F6D] font-[600] leading-[38px]">
               R$ 00,00
             </span>
+            <div className="md:hidden">
+              <div className="flex justify-between">
+                <span className=" text-textColor text-[24px] font-[600] leading-[38px]">
+                  R$ 1,843.82
+                </span>
+                <div
+                  className="rounded-full px-4 flex items-center bg-[#ECFDF3]
+ border-[#ABEFC6] border text-[#067647] gap-1 text-[14px]"
+                >
+                  <FaArrowUp className="text-[#17B26A]" />
+                  7.2%
+                </div>
+              </div>
+              <div className="flex justify-between pt-6">
+                <div
+                  className="rounded-full px-4 flex items-center bg-[#F7F8F9]
+ border-[#EAECF0] border text-textColor gap-1 text-[14px]"
+                >
+                  8 contas
+                </div>
+                <button className="text-[#9199B1] flex gap-[5px] items-center justify-center">
+                  Ver todas{" "}
+                  <div className="text-[#4E5A7B] p-[5px]  rounded-[16px] border border-[#DFE4F1]">
+                    <FaChevronRight className="w-[12px] h-[12px]" />
+                  </div>
+                </button>
+              </div>
+            </div>
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col p-0 gap-[32px]">
+        <CardContent className="hidden md:flex flex-col p-0 gap-[32px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[12px]">
             <Card className="flex flex-col px-[16px] py-[20px] gap-[20px] rounded-[12px] border border-[#EAECF0]">
               <CardContent className="flex flex-col gap-[24px] p-0">
@@ -103,25 +132,23 @@ const Analytics = () => {
         </CardContent>
       </Card>
 
-      <div className="flex flex-col max-w-[392px] gap-[16px]">
-        <Card className="bg-white rounded-[12px] border-[#EAECF0] p-[24px]">
-          <CardContent className="flex flex-col p-0 gap-[24px]">
-            <CardDescription className="text-[#8D7F6D] text-[16px] font-[500] leading-[24px]">
+      <div className="grid grid-cols-2 md:flex flex-col w-full md:max-w-[392px] gap-[16px]">
+        <Card className="bg-white rounded-[12px] border-[#EAECF0] p-[16px] md:p-[24px]">
+          <CardContent className="flex flex-col p-0 md:gap-[24px]">
+            <CardDescription className="text-[#8D7F6D] text-[14px] md:text-[16px] font-[500] leading-[24px]">
               Entradas do mês
             </CardDescription>
             <div className="flex items-center gap-[16px]">
               <div className="flex flex-col gap-[16px]">
-                <CardTitle className="text-textColor text-[24px] font-[600] leading-[32px]">
+                <CardTitle className="hidden md:block text-textColor text-[24px] font-[600] leading-[32px]">
                   R$ 00.00
+                </CardTitle>
+                <CardTitle className="md:hidden text-textColor text-[20px] font-[600] leading-[32px]">
+                  R$ 91.42
                 </CardTitle>
                 <div className="flex gap-[8px]">
                   <div className="flex gap-[2px]">
-                    <img
-                      width={"20px"}
-                      height={"20px"}
-                      src="/assets/arrow-up-green.svg"
-                      alt="trend-up"
-                    />
+                    <FaArrowUp className="text-[#17B26A]" />
                     <span className="text-[#067647] text-[14px] font-[500] leading-[20px]">
                       00%
                     </span>
@@ -136,9 +163,10 @@ const Analytics = () => {
                 height={"64px"}
                 src="/assets/chart-green.svg"
                 alt="chart"
+                className="hidden md:block"
               />
             </div>
-            <CardContent className="flex flex-col p-0">
+            <CardContent className="hidden md:flex flex-col p-0">
               <div className="flex justify-between py-3">
                 <div className="flex gap-[8px] text-[#475467] text-[14px] font-[500] leading-[20px]">
                   <img
@@ -171,25 +199,23 @@ const Analytics = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-white rounded-[12px] border-[#EAECF0] p-[24px]">
-          <CardContent className="flex flex-col p-0 gap-[24px]">
-            <CardDescription className="text-[#8D7F6D] text-[16px] font-[500] leading-[24px]">
+        <Card className="bg-white rounded-[12px] border-[#EAECF0] p-[16px] md:p-[24px]">
+          <CardContent className="flex flex-col p-0  md:gap-[24px]">
+            <CardDescription className="text-[#8D7F6D] text-[14px] md:text-[16px] font-[500] leading-[24px]">
               Saídas do mês
             </CardDescription>
             <div className="flex items-center gap-[16px]">
               <div className="flex flex-col gap-[16px]">
-                <CardTitle className="text-textColor text-[24px] font-[600] leading-[32px]">
+                <CardTitle className="hidden md:block text-textColor text-[24px] font-[600] leading-[32px]">
                   R$ 00.00
+                </CardTitle>
+                <CardTitle className="md:hidden text-textColor text-[20px] font-[600] leading-[32px]">
+                  R$ 32.42
                 </CardTitle>
                 <div className="flex gap-[8px]">
                   <div className="flex gap-[2px]">
-                    <img
-                      width={"20px"}
-                      height={"20px"}
-                      src="/assets/arrow-up-red.svg"
-                      alt="trend-up"
-                    />
-                    <span className="text-[#067647] text-[14px] font-[500] leading-[20px]">
+                    <FaArrowDown className="text-[#F04438]" />
+                    <span className="text-[#F04438] md:text-[#067647] text-[14px] font-[500] leading-[20px]">
                       00%
                     </span>
                   </div>
@@ -203,9 +229,10 @@ const Analytics = () => {
                 height={"64px"}
                 src="/assets/chart-red.svg"
                 alt="chart"
+                className="hidden md:block"
               />
             </div>
-            <CardContent className="flex flex-col p-0">
+            <CardContent className="hidden md:flex flex-col p-0">
               <div className="flex justify-between py-3">
                 <div className="flex gap-[8px] text-[#475467] text-[14px] font-[500] leading-[20px]">
                   <img

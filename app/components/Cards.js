@@ -1,14 +1,14 @@
 import React from "react";
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardTitle,
-  } from "@/components/ui/card";
-  
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from "@/components/ui/card";
+
 const Cards = () => {
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+    <div className="hidden md:grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
       <Card className="flex items-start gap-[12px] px-[16px] py-[20px] border border-[#EAECF0] bg-white shadow-sm">
         <div className="flex items-center justify-center p-[24px] rounded-full shadow border border-[#EAECF0]">
           <img

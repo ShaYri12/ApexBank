@@ -1,9 +1,15 @@
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 
 const NewCardsAnnouncement = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center ps-[54px] justify-between">
+    <div className="hidden md:flex flex-col md:flex-row items-center ps-[54px] justify-between">
       <Card className="flex flex-col items-start md:w-1/2 bg-transparent border-none shadow-none p-0">
         <CardContent className="p-0 flex flex-col gap-[24px]">
           <CardHeader className="flex items-start p-0 gap-[24px]">
@@ -19,7 +25,8 @@ const NewCardsAnnouncement = () => {
             </CardTitle>
           </CardHeader>
           <CardDescription className="text-[20px] text-[#475467] font-[400] leading-[30px]">
-            Quando se trata de administrar suas finanças, a escolha do cartão certo faz toda a diferença.
+            Quando se trata de administrar suas finanças, a escolha do cartão
+            certo faz toda a diferença.
           </CardDescription>
         </CardContent>
       </Card>
