@@ -29,7 +29,7 @@ const NewCardsAnnouncement = () => {
           height={"410px"}
           src="/assets/new-card.svg"
           alt="cardimg"
-          className="mr-[-15%]"
+          className="md:mr-[-13%] mr-0"
         />
       </div>
     </div>

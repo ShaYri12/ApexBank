@@ -46,7 +46,7 @@ const ExchangeRates = () => {
                     5.190,47 <span className="font-[400]">USD</span>
                   </p>
                 </div>
-                <Badge className="bg-[#ECFDF3] border border-[#ABEFC6] text-[#067647] border-dotted">
+                <Badge className="bg-[#ECFDF3] border border-[#ABEFC6] hover-bg-[#ECFDF3] text-[#067647] border-dotted">
                   <img
                     width={"12px"}
                     height={"12px"}
@@ -78,7 +78,7 @@ const ExchangeRates = () => {
                     5.190,47 <span className="font-[400]">EUR</span>
                   </p>
                 </div>
-                <Badge className="bg-[#ECFDF3] border border-[#ABEFC6] text-[#067647] border-dotted">
+                <Badge className="bg-[#ECFDF3] border border-[#ABEFC6] hover-bg-[#ECFDF3] text-[#067647] border-dotted">
                   <img
                     width={"12px"}
                     height={"12px"}
@@ -112,7 +112,7 @@ const ExchangeRates = () => {
                     5.190,47 <span className="font-[400]">CNY</span>
                   </p>
                 </div>
-                <Badge className="bg-[#FEF3F2] border border-[#FECDCA] text-[#B42318] border-dotted flex items-center">
+                <Badge className="bg-[#FEF3F2] border border-[#FECDCA] hover-bg-[#FEF3F2] text-[#B42318] border-dotted flex items-center">
                   <img
                     className="transform rotate-180"
                     width={"12px"}
@@ -145,7 +145,7 @@ const ExchangeRates = () => {
                     5.190,47 <span className="font-[400]">RUB</span>
                   </p>
                 </div>
-                <Badge className="bg-[#ECFDF3] border border-[#ABEFC6] text-[#067647] border-dotted">
+                <Badge className="bg-[#ECFDF3] border border-[#ABEFC6] hover:bg-[#ECFDF3] text-[#067647] border-dotted">
                   <img
                     width={"12px"}
                     height={"12px"}
