@@ -55,12 +55,12 @@ const Sidebar = () => {
     <>
       <div
         className={`hidden lg:block relative left-0 sidebar-behind ${
-          isExpanded ? "lg:w-[421px] md:w-[260px] w-[82px]" : "w-[82px]"
+          isExpanded ? "lg:w-[421px]  w-0" : "lg:w-[82px] w-0"
         }`}
       ></div>
       <aside
-        className={`hidden md:fixed inset-y-0 overflow-y-auto left-0 ${
-          isExpanded ? "md:w-[200px] lg:w-[312px] w-[82px]" : "w-[82px]"
+        className={`hidden lg:fixed inset-y-0 overflow-y-auto left-0 ${
+          isExpanded ? " lg:w-[312px] w-0" : "w-[82px]"
         } justify-between z-10 hidden flex-col border-r border-[#EAECF0] bg-[#FFFFFF] sm:flex`}
       >
         <div className="flex flex-col pt-[32px] text-[16px] gap-[24px]">

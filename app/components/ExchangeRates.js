@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 
 const ExchangeRates = () => {
   return (
-    <div className="flex flex-col md:flex-row bg-customGradient text-white rounded-[24px] shadow overflow-hidden">
+    <div className="flex flex-col lg:flex-row bg-customGradient text-white rounded-[24px] shadow overflow-hidden">
       <Card className="md:px-[48px] p-[24px] md:py-[32px] md:gap-[25px] flex flex-col flex-grow bg-customGradient border-none rounded-none">
         <CardContent className="flex flex-col gap-[20px] p-0">
           <div>
@@ -25,11 +25,11 @@ const ExchangeRates = () => {
             <CardTitle className="text-[30px] text-white leading-[38px] font-[600] mb-2 p-0">
               Faça câmbio agora na Apex Bank
             </CardTitle>
-            <CardDescription className="hidden md:block text-[16px] text-white leading-[24px] font-[400] p-0">
+            <CardDescription className="hidden lg:block text-[16px] text-white leading-[24px] font-[400] p-0">
               Nós temos as soluções para simplificar a sua forma de fazer
               câmbio.
             </CardDescription>
-            <CardDescription className="md:hidden text-[16px] text-white leading-[24px] font-[400] p-0">
+            <CardDescription className="lg:hidden text-[16px] text-white leading-[24px] font-[400] p-0">
               Na Apex Bank você vai encontrar especialistas prontos para te
               ajudar
             </CardDescription>
@@ -37,7 +37,7 @@ const ExchangeRates = () => {
               Falar com especialista
             </Button>
           </CardHeader>
-          <div className="hidden md:flex flex-col gap-[12px]">
+          <div className="hidden lg:flex flex-col gap-[12px]">
             <div className="flex gap-[10px]">
               <Card className="flex items-center justify-between text-[#28365C] rounded-[47px] bg-white p-[12px] gap-[12px] shadow-none">
                 <div className="flex items-center gap-[8px]">
@@ -173,7 +173,7 @@ const ExchangeRates = () => {
             </div>
           </div>
         </CardContent>
-        <CardDescription className="hidden md:block text-white text-[12px] leading-[18px] font-[400]">
+        <CardDescription className="hidden lg:block text-white text-[12px] leading-[18px] font-[400]">
           *Valor de câmbio oficial sem considerar taxas e volumes financeiros.
           Fale com nossa equipe
         </CardDescription>
@@ -182,7 +182,7 @@ const ExchangeRates = () => {
         <img
           src="/assets/exchange.jpg"
           alt="Sailing image"
-          className="w-full h-full object-cover hidden md:block"
+          className="w-full h-full object-cover hidden lg:block"
         />
       </div>
     </div>
